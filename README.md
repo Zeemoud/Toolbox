@@ -3,7 +3,6 @@
 ![Python Version](https://img.shields.io/badge/python-3.11+-blue.svg)
 ![PyQt6](https://img.shields.io/badge/GUI-PyQt6-blueviolet.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Repo Size](https://img.shields.io/github/repo-size/Zeemoud/Toolbox)
 
 Une suite logicielle tout-en-un développée en **Python** avec **PyQt6**. Cette boîte à outils regroupe des fonctionnalités essentielles allant du téléchargement multimédia à la sécurité, le tout dans une interface moderne et personnalisable.
 
