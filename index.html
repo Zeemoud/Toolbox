@@ -3,58 +3,180 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Toolbox by Zeemoud</title>
+    <title>Toolbox - Par Zeemoud</title>
     <style>
+      :root {
+        --bg-color: #121212;
+        --card-bg: #1e1e1e;
+        --accent-color: #00ff88; /* Le vert fluo de ta toolbox */
+        --text-main: #ffffff;
+        --text-secondary: #b3b3b3;
+        --btn-hover: #00cc6e;
+      }
+
       body {
-        font-family: sans-serif;
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 700px;
+        width: 90%;
+        padding: 40px;
+        background: var(--card-bg);
+        border-radius: 20px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
         text-align: center;
-        background: #1a1a1a;
-        color: white;
-        padding: 50px;
+        border: 1px solid #333;
       }
-      .card {
-        background: #2d2d2d;
-        padding: 30px;
+
+      .header h1 {
+        font-size: 3rem;
+        margin: 10px 0;
+        color: var(--accent-color);
+        letter-spacing: -1px;
+      }
+
+      .emoji-main {
+        font-size: 4rem;
+        margin-bottom: 0;
+      }
+
+      .tagline {
+        color: var(--text-secondary);
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        font-weight: 300;
+      }
+
+      .readme-section {
+        text-align: left;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 25px;
         border-radius: 15px;
-        display: inline-block;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        margin-bottom: 35px;
+        border-left: 4px solid var(--accent-color);
       }
-      h1 {
-        color: #00ff88;
+
+      .readme-section h2 {
+        font-size: 1.3rem;
+        margin-top: 0;
+        color: var(--accent-color);
       }
-      .btn {
-        display: inline-block;
-        background: #00ff88;
-        color: #1a1a1a;
-        padding: 15px 25px;
-        border-radius: 8px;
-        text-decoration: none;
+
+      .readme-section ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .readme-section li {
+        margin-bottom: 12px;
+        padding-left: 28px;
+        position: relative;
+      }
+
+      .readme-section li::before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: var(--accent-color);
         font-weight: bold;
-        margin-top: 20px;
+      }
+
+      .btn-download {
+        display: inline-block;
+        background-color: var(--accent-color);
+        color: #000;
+        padding: 20px 45px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 10px 20px rgba(0, 255, 136, 0.2);
+      }
+
+      .btn-download:hover {
+        background-color: var(--btn-hover);
+        transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(0, 255, 136, 0.4);
+      }
+
+      .repo-link {
+        display: inline-block;
+        margin-top: 25px;
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.95rem;
+        border-bottom: 1px solid transparent;
         transition: 0.3s;
       }
-      .btn:hover {
-        background: #00cc6e;
-        transform: scale(1.05);
+
+      .repo-link:hover {
+        color: var(--accent-color);
+        border-bottom: 1px solid var(--accent-color);
       }
-      p {
-        color: #ccc;
+
+      footer {
+        margin-top: 40px;
+        font-size: 0.85rem;
+        color: #555;
       }
     </style>
   </head>
   <body>
-    <div class="card">
-      <h1>🛠️ Ma Super Toolbox</h1>
-      <p>
-        Une application tout-en-un pour télécharger des vidéos, générer des QR
-        codes et bien plus.
-      </p>
-      <a
-        href="https://github.com/Zeemoud/Toolbox/releases/download/v1.0/toolbox-setup.exe"
-        class="btn"
-      >
-        Télécharger pour Windows (Gratuit)
-      </a>
+    <div class="container">
+      <div class="header">
+        <div class="emoji-main">🛠️</div>
+        <h1>Toolbox</h1>
+        <p class="tagline">
+          L'utilitaire tout-en-un simple, rapide et efficace.
+        </p>
+      </div>
+
+      <div class="readme-section">
+        <h2>À quoi ça sert ?</h2>
+        <ul>
+          <li>
+            <strong>YouTube Downloader :</strong> Téléchargez vos vidéos en MP4
+            haute qualité instantanément.
+          </li>
+          <li>
+            <strong>Générateur de QR Code :</strong> Créez des QR codes pour vos
+            liens ou textes.
+          </li>
+          <li>
+            <strong>Interface Moderne :</strong> Un design sombre épuré pour ne
+            pas se fatiguer les yeux.
+          </li>
+          <li>
+            <strong>Portable :</strong> Un seul fichier à installer, pas de
+            dépendances complexes.
+          </li>
+        </ul>
+      </div>
+
+      <div class="download-section">
+        <a
+          href="https://github.com/Zeemoud/Toolbox/releases/download/v1.0/toolbox-setup.exe"
+          class="btn-download"
+        >
+          🚀 Télécharger pour Windows
+        </a>
+        <br />
+        <a href="https://github.com/Zeemoud/Toolbox" class="repo-link">
+          Accéder au code source sur GitHub
+        </a>
+      </div>
+
+      <footer>Développé par Zeemoud • Propulsé par Python & PyQt6</footer>
     </div>
   </body>
 </html>
